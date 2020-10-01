@@ -67,6 +67,12 @@ a:visited {
   color: rgb(0, 80, 160);
 }
 
+small {
+  font-size: 1rem;
+  text-align: right;
+  line-height: 2
+}
+
 label {
   display: block;
   padding: 10px 0 0;

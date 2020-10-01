@@ -1,41 +1,41 @@
 <script>
-  import { scale, fade } from "svelte/transition"
-  import { crossmorph } from "./transitions/crossmorph.js"
-  import { quintIn } from "svelte/easing"
-  import { Close, Intro, Form } from "./components/index"
+  import { scale, fade } from "svelte/transition";
+  import { crossmorph } from "./transitions/crossmorph.js";
+  import { quintIn } from "svelte/easing";
+  import { Close, Intro, Form } from "./components/index";
 
   let easing = quintIn,
     duration = 400,
     delay = 250,
     keyCode,
     showSignup = false,
-		showLogin = false,
-		fadein = false
+    showLogin = false,
+    fadein = false;
 
   const [send, receive] = crossmorph({
     duration,
     easing,
     delay,
-    fallback: scale
-  })
+    fallback: scale,
+  });
 
   function openLogin() {
-    showLogin = true
+    showLogin = true;
   }
   function hideLogin() {
-    showLogin = false
+    showLogin = false;
   }
   function openSignup() {
-    showSignup = true
+    showSignup = true;
   }
   function hideSignup() {
-    showSignup = false
+    showSignup = false;
   }
   function handleKeydown(event) {
-    keyCode = event.keyCode
+    keyCode = event.keyCode;
     if (keyCode == 27) {
-        hideSignup()
-        hideLogin()
+      hideSignup();
+      hideLogin();
     }
   }
 </script>
@@ -55,8 +55,8 @@
         out:send={{ key: 'login' }}>
         <span
           style="z-index: 9"
-					out:fade={{ duration: 550 }}
-					on:outroend={()=> fadein = true}
+          out:fade={{ duration: 550 }}
+          on:outroend={() => (fadein = true)}
           in:fade={{ delay: duration + 100 }}>Login</span>
       </button>
     {/if}
@@ -70,8 +70,8 @@
         out:send={{ key: 'signup' }}>
         <span
           style="z-index: 9"
-					out:fade={{ duration: 550 }}
-					on:outroend={()=> fadein = true}
+          out:fade={{ duration: 550 }}
+          on:outroend={() => (fadein = true)}
           in:fade={{ delay: duration + 100 }}>Signup</span>
       </button>
     {/if}
@@ -99,7 +99,9 @@
       </div>
     </div>
   {/if}
-  {#if showLogin || showSignup}<span in:fade out:fade={{ delay: 450 }} class="overlay" />{/if}
+  {#if showLogin || showSignup}
+    <span in:fade out:fade={{ delay: 450 }} class="overlay" />
+  {/if}
 </main>
 
 <style>
@@ -140,13 +142,13 @@
     right: 0;
     bottom: 0;
     display: grid;
-		place-content: center;
-		opacity: 0;
-		transform: opacity .9s ease-out;
-	}
-	.fadein {
-		opacity: 1;
-	}
+    place-content: center;
+    opacity: 0;
+    transform: opacity 0.9s ease-out;
+  }
+  .fadein {
+    opacity: 1;
+  }
   .pop {
     background-color: #3d3f46;
     width: 340px;
@@ -158,7 +160,7 @@
     box-sizing: border-box;
     will-change: transform;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-			0 10px 10px -5px rgba(0, 0, 0, 0.04);
-		border-radius: var(--roundness);
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: var(--roundness);
   }
 </style>
