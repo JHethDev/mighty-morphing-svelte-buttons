@@ -1,4 +1,13 @@
 {
   "extends": "@snowpack/app-scripts-svelte",
-  "plugins": []
+  "plugins": [
+    [
+      "@snowpack/plugin-webpack",
+      {
+        "scripts": {
+          "bundle:*": "@snowpack/plugin-webpack"
+        }
+      }
+    ]
+  ]
 }

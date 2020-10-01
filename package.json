@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@snowpack/app-scripts-svelte": "^1.8.5",
+    "@snowpack/plugin-webpack": "^2.0.13",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/svelte": "^3.0.0",
     "jest": "^26.2.2",
