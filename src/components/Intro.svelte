@@ -11,7 +11,7 @@
 <small class:blur>
   Inspiration: this <a href="https://tympanus.net/Development/ButtonComponentMorph/index.html">demo</a> by Mary Lou<br />
   100% Svelte, no dependencies<br />
-  <a href="https:github.com/jhethdev/mighty-morphing-svelte-buttons"> 
+  <a href="https://github.com/JHethDev/mighty-morphing-svelte-buttons"> 
     Fork this on Github
     <svg
       fill="none"
