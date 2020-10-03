@@ -8,7 +8,7 @@
   }
 </script>
 
-<button in:fade={{ delay: 600 }} out:fade={{ duration: 100 }} on:click={close}>
+<button class="noblue" in:fade={{ delay: 600 }} out:fade={{ duration: 100 }} on:click={close}>
   <svg
     fill="none"
     stroke="currentColor"

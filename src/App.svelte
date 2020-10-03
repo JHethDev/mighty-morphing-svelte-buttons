@@ -47,7 +47,7 @@
   <div class="grid">
     {#if !showLogin}
       <button
-        class="login"
+        class="login noblue"
         class:blur={showSignup}
         class:active={showLogin}
         on:click={openLogin}
@@ -62,7 +62,7 @@
     {/if}
     {#if !showSignup}
       <button
-        class="signup"
+        class="signup noblue"
         class:blur={showLogin}
         class:active={showSignup}
         on:click={openSignup}
@@ -105,13 +105,6 @@
 </main>
 
 <style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding-top: 5rem;
-  }
-
   .login {
     grid-area: 1 / 1 / 2 / 2;
   }

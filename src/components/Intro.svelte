@@ -38,11 +38,18 @@
   small {
     padding: 1.25rem;
     position: absolute;
-    right: 0;
-    top: 0;
+    left: 0;
+    bottom: 0;
     transition: all 0.3s ease 0.3s;
   }
   a {
     display: inline;
+  }
+  @media (min-width: 1244px) {
+    small {
+      top: 0;
+      right: 0;
+      text-align: right
+    }
   }
 </style>

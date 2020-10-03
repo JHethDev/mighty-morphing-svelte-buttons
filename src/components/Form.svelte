@@ -11,5 +11,5 @@
   <p in:scale={{ delay: 700 }} out:fade={{ duration: 150 }}>
     <label>Password<input type="password" /></label>
   </p>
-  <button on:click|preventDefault in:scale={{ delay: 750 }} out:fade={{ duration: 200 }}>{title}</button>
+  <button class="noblue" on:click|preventDefault in:scale={{ delay: 750 }} out:fade={{ duration: 200 }}>{title}</button>
 </form>
